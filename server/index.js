@@ -4,7 +4,7 @@ const app=express();
 
 
 app.get("/",(req,res)=>{
-    res.send("hello");
+    res.sendStatus(200).send("hello");
 })
 
 app.get("/data/:key",(req,res)=>{
