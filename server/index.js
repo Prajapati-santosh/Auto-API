@@ -3,6 +3,10 @@ import data from "./Data/DataMap.js";
 const app=express();
 
 
+app.get("/",(req,res)=>{
+    res.send("hello");
+})
+
 app.get("/data/:key",(req,res)=>{
     if(req.params.key==process.env.API_KEY){
         const query = req.query.name;
